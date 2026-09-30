@@ -1,0 +1,11 @@
+{
+  "appId": "app.web.kukusanmy.twa",
+  "appName": "KUKUSAN Admin",
+  "webDir": "www",
+  "server": {
+    "url": "https://kukusanmy.web.app/Admin.html",
+    "allowNavigation": ["kukusanmy.web.app"],
+    "errorPath": "offline.html"
+  },
+  "android": { "backgroundColor": "#F4F1FF" }
+}

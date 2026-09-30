@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>KUKUSAN Admin</title>
+<meta name="theme-color" content="#6C3CE1">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png">
+<style>
+  html,body{margin:0;padding:0;height:100%;background:#F4F1FF;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Nunito,sans-serif}
+  .wrap{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px;text-align:center}
+  .logo{width:120px;height:120px;border-radius:50%;box-shadow:0 10px 30px rgba(29,21,55,.15)}
+  .spin{width:34px;height:34px;border:4px solid #E3DBFF;border-top-color:#6C3CE1;border-radius:50%;animation:sp 0.8s linear infinite}
+  @keyframes sp{to{transform:rotate(360deg)}}
+  p{color:#4B4468;font-weight:700;font-size:15px;margin:0}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <img class="logo" src="icons/icon-512.png" alt="KUKUSAN">
+    <div class="spin"></div>
+    <p>Memuatkan KUKUSAN&hellip;</p>
+  </div>
+  <script>
+    /* Skrin ni cuma "splash" sekejap semasa APK sambung ke app sebenar
+       (https://kukusanmy.web.app/Admin.html, ditetapkan dalam capacitor.config.json
+       server.url). Kalau page ni dibuka terus sebagai web biasa (bukan dalam APK),
+       terus lantun ke app sebenar supaya tak tersekat kat skrin loading je. */
+    if(!(window.Capacitor && Capacitor.isNativePlatform && Capacitor.isNativePlatform())){
+      setTimeout(function(){
+        try{ location.replace('https://kukusanmy.web.app/Admin.html'); }catch(e){}
+      }, 300);
+    }
+    if('serviceWorker' in navigator && location.protocol.indexOf('http')===0){
+      addEventListener('load', function(){
+        navigator.serviceWorker.register('sw.js').catch(function(){});
+      });
+    }
+  </script>
+</body>
+</html>

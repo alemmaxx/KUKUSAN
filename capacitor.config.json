@@ -1,6 +1,6 @@
 {
   "appId": "app.web.kukusanmy.twa",
-  "appName": "KUKUSAN Admin",
+  "appName": "KuKuSan",
   "webDir": "www",
   "server": {
     "url": "https://kukusanmy.web.app/Admin.html",

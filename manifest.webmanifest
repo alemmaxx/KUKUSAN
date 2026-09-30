@@ -1,5 +1,5 @@
 {
-  "name": "KUKUSAN Admin",
+  "name": "KuKuSan",
   "short_name": "KuKuSan",
   "description": "Sistem admin untuk urus order KUKUSAN",
   "start_url": "./index.html",

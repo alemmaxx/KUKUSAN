@@ -7,5 +7,15 @@
     "allowNavigation": ["kukusanmy.web.app"],
     "errorPath": "offline.html"
   },
-  "android": { "backgroundColor": "#F4F1FF" }
+  "android": { "backgroundColor": "#F4F1FF" },
+  "plugins": {
+    "BluetoothLe": {
+      "displayStrings": {
+        "scanning": "Mencari printer...",
+        "cancel": "Batal",
+        "availableDevices": "Printer dijumpai",
+        "noDeviceFound": "Tiada printer dijumpai"
+      }
+    }
+  }
 }
